@@ -71,7 +71,7 @@ class OwnerController extends Controller
 
 	public function getPlaces()
 	{
-		return new PlaceCollection(Place::all());
+		return new PlaceCollection(auth('api')->user()->places);
 	}
 	public function getPlace($id)
 	{
@@ -81,7 +81,7 @@ class OwnerController extends Controller
 
 		if(!$this->authorize('view', $place))
 		{
-			abort(response()->json('Unauthorized', 401) );
+			 return response()->json('Unautherized', 401);
 
 		}
         return new PlaceResource($place);

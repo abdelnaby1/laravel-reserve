@@ -8,8 +8,8 @@ Route::group(['prefix' => 'api/owner'], function() {
 
 	// Route::get('logout', 'OwnerController@logout');
 
-	Route::get('/places','Owner\OwnerController@getPlaces');
-	Route::get('/places/{id}','Owner\OwnerController@getPlace');
+		Route::get('/places','Owner\OwnerController@getPlaces');
+		Route::get('/places/{id}','Owner\OwnerController@getPlace');
 
 	});
 });

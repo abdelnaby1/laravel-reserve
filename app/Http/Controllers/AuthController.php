@@ -43,7 +43,7 @@ class AuthController extends Controller
         } 
         else
         { 
-            return response()->json(['error'=>'Unauthorised'], 401); 
+            return response()->json(['error'=>'Unauthorised user'], 401); 
         } 
     }
      public function register(Request $request) 
@@ -51,7 +51,6 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(), [ 
             'name' => 'required', 
             'email' => 'required|email|unique:users',
-            'role'	=> 'required',
             'password' => 'required', 
             'c_password' => 'required|same:password', 
         ]);

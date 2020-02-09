@@ -39,7 +39,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes();
         $this->mapApiRoutes();
 
-        $this->mapOwnerRoutes();
+        // $this->mapOwnerRoutes();
 
         //
     }
@@ -72,10 +72,10 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
     }
-    protected function mapOwnerRoutes()
-    {
-        Route::middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/owner.php'));
-    }
+    // protected function mapOwnerRoutes()
+    // {
+    //     Route::middleware('api')
+    //          ->namespace($this->namespace)
+    //          ->group(base_path('routes/owner.php'));
+    // }
 }

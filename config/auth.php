@@ -42,21 +42,20 @@ return [
         ],
 
         'api' => [
-            'driver' => 'passport',
+            'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
         ],
-        // 'owner' => [
-        //     'driver' => 'passport',
-        //     'provider' => 'owners',
-        //     'hash' => false,
-        // ],
+        'owner' => [
+            'driver' => 'token',
+            'provider' => 'owners',
+            'hash' => false,
+        ],
         // 'admin' => [
         //     'driver' => 'passport',
         //     'provider' => 'admins',
         //     'hash' => false,
         // ],
-
     ],
 
     /*
@@ -81,16 +80,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-        // 'owners' => [
-        //     'driver' => 'eloquent',
-        //     'model' => App\Owner::class,
-        // ],
-        // 'admins' => [
-        //     'driver' => 'eloquent',
-        //     'model' => App\Admin::class,
-        // ],
 
-
+        'owners' => [
+            'driver' => 'eloquent',
+            'model' => App\Owner::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

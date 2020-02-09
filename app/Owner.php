@@ -10,16 +10,19 @@ use Laravel\Passport\HasApiTokens;
 
 class Owner extends Authenticatable
 {
-    use HasApiTokens,Notifiable;
+    use Notifiable;
 
-    protected $guard = 'owner';
+    // protected $table = 'owners';
+
+
+    // protected $guard = 'owner';
 
     protected $fillable = [
          'name', 'email', 'password',
     ];
 
-    // public function places()
-    // {
-    // 	return $this->hasMany('App\Place');
-    // }
+    public function places()
+    {
+    	return $this->hasMany('App\Place');
+    }
 }

@@ -15,7 +15,7 @@ class CheckPermission
      */
     public function handle($request, Closure $next)
     {
-        if($request->user('api')->role = 'owner')
+        if($request->user('api')->role == 'owner')
         {
             return $next($request);
         }else{
