@@ -22,7 +22,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 1
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
          place::create([
@@ -33,8 +33,9 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 2
-        ]);
+			'owner_id'      => factory('App\Owner')->create()->id
+					
+		]);
 
 
           place::create([
@@ -45,7 +46,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 2
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
            place::create([
@@ -56,7 +57,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 2
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
 
@@ -68,7 +69,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 3
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
 
@@ -80,7 +81,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 4
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
 
@@ -93,7 +94,7 @@ class PlacesTableSeeder extends Seeder
         	'description'	=>	$faker->text(),
             'gender'        => 'male',
         	'price'			=> 	rand(50,250),
-            'user_id'      => 5
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
 
@@ -105,7 +106,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 6
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
 
@@ -117,7 +118,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 6
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
 
@@ -130,7 +131,7 @@ class PlacesTableSeeder extends Seeder
         	'description'	=>	$faker->text(),
             'gender'        => 'female',
         	'price'			=> 	rand(50,250),
-            'user_id'      => 7
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
 
@@ -142,7 +143,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 8
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
          place::create([
@@ -154,7 +155,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 9
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
          place::create([
@@ -165,7 +166,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 10
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
 
@@ -178,7 +179,7 @@ class PlacesTableSeeder extends Seeder
         	'description'	=>	$faker->text(),
             'gender'        => 'female',
         	'price'			=> 	rand(50,250),
-            'user_id'      => 11
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
          place::create([
@@ -189,7 +190,7 @@ class PlacesTableSeeder extends Seeder
         	'location'		=>	$faker->address,
         	'description'	=>	$faker->text(),
         	'price'			=> 	rand(50,250),
-            'user_id'      => 12
+            'owner_id'      => factory('App\Owner')->create()->id
         ]);
 
 

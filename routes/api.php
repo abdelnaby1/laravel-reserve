@@ -18,8 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::middleware('auth:owner')->get('/owner', function (Request $request) {
-    return $request->user();
+    return auth()->user()->places;
 });
+
 
 
 // Route::get('/places','PlaceController@index');
