@@ -11,7 +11,7 @@ $factory->define(Owner::class, function (Faker $faker) {
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
-        'password' => '12345', // password
+        'password' => bcrypt('123456'), // password
         'api_token'  => bin2hex(openssl_random_pseudo_bytes(30)),
         'remember_token' => Str::random(10),
     ];

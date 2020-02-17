@@ -15,7 +15,9 @@ class OwnerProvider
      */
     public function handle($request, Closure $next)
     {
-        config(['auth.guards.api.provider' => 'owners']);
+        // config(['auth.guards.api.provider' => 'owners']);
+        config(['auth.guards.web.provider' => 'owners']);
+
         return $next($request);
     }
 }

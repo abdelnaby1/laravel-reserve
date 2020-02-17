@@ -18,9 +18,18 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::middleware('auth:owner')->get('/owner', function (Request $request) {
-    return auth()->user()->places;
+    return auth()->user();
 });
 
+Route::post('register','User\AuthController@register');
+Route::post('login','User\AuthController@login');
+
+Route::prefix('owner')->group(function () {
+    Route::middleware('auth.owner')->group(function () {
+        Route::post('register','Owner\AuthController@register');
+        Route::post('login','Owner\AuthController@login');
+    }); 
+});
 
 
 // Route::get('/places','PlaceController@index');
